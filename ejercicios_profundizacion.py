@@ -15,6 +15,8 @@ __author__ = "Inove Coding School"
 __email__ = "alumnos@inove.com.ar"
 __version__ = "1.3"
 
+from ejercicios_practica import promedio, ordenar, contar, lista_aleatoria
+
 
 def ej1():
     print('Comencemos a crear lo nuestro!')
@@ -32,6 +34,7 @@ def ej1():
     Importe el módulo a este programa/documento para su uso
     en el resto de los ejercicios
     '''
+    #realizado
 
 
 def ej2():
@@ -48,12 +51,18 @@ def ej2():
     se deben parecer a:
     [1, 2, 3, 2, 5]
     Cada valor representa el valor que sacó cada uno de los 5 dados
-
+    
     1)
     Utilice la función "ordenar" para ordenar la lista
     de números generados.
     Imprimir en pantalla la lista ordenada
     '''
+    lista_ordenada = []
+    lista_aleatoria(1,6,5,lista_ordenada)
+    ordenar(lista_ordenada)
+    print("Me costó pero añadi un parámetro más en donde almacené la lista!")
+    #realizado
+
 
 
 def ej3():
@@ -73,20 +82,29 @@ def ej3():
 
     1)
     Utilice la función "contar" para contar cuantas veces aparece:
-    a - Cuantsa veces aparece el número 1 en su lista de dados tirados
-    b - Cuantsa veces aparece el número 2 en su lista de dados tirados
-    c - Cuantsa veces aparece el número 3 en su lista de dados tirados
-    d - Cuantsa veces aparece el número 4 en su lista de dados tirados
-    e - Cuantsa veces aparece el número 5 en su lista de dados tirados
-    f - Cuantsa veces aparece el número 6 en su lista de dados tirados
-
+    a - Cuántas veces aparece el número 1 en su lista de dados tirados
+    b - Cuántas veces aparece el número 2 en su lista de dados tirados
+    c - Cuántas veces aparece el número 3 en su lista de dados tirados
+    d - Cuántas veces aparece el número 4 en su lista de dados tirados
+    e - Cuántas veces aparece el número 5 en su lista de dados tirados
+    f - Cuántas veces aparece el número 6 en su lista de dados tirados
 
     2)
     Utilice la función de Python max con la key de list.count para
     determinar cual fue el número que más se repitió. Consultar los ejemplos
     vistos en clase para ver como se implementa max con esa key
-
     '''
+    v = []
+    lista_aleatoria(1,6,5,v)
+    
+    i = 1
+    while True:
+        contar(v,i)
+        i += 1
+        if i == 7:
+            break
+    #realizado
+
 
 
 def ej4():

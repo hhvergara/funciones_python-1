@@ -24,12 +24,53 @@ def imprimir_nombre(nombre, apellido):
     # en pantalla el nombre y apellido que vienen por parámetro
     # print(.....)
 
+    print("Nombre completo: {}{}".format(nombre,apellido))
+
+
 
 def promedio(numeros):
     # Alumno:
     # 1) calcule el promedio
     # 2) use "return" para retornar ese valor
-    pass  # Cuando termine de implementar está función borrar "pass"
+    # Cuando termine de implementar está función borrar "pass"
+
+    """     for n in numeros:
+                n += numeros
+    
+            promedio = n / len(numeros) """
+
+    promedio = sum(numeros) / len(numeros)
+    return promedio
+    #realizado
+
+
+
+def ordenar(numeros):
+    
+    numeros.sort()
+    print(numeros)
+
+
+
+lista_aleatoria_plus = []
+
+def lista_aleatoria(inicio,fin,cantidad,lista_aleatoria_plus):
+    
+    for i in range(cantidad):
+        num_aleatorio = random.randrange(inicio,fin+1)
+        lista_aleatoria_plus.append(num_aleatorio)
+    print(lista_aleatoria_plus)
+
+
+
+def contar(lista,num):
+
+    rep = 0
+    for i in lista:
+        if i == num:
+            rep += 1
+    print("El número {} se repite {} veces!".format(num,rep))
+
 
 
 def ej1():
@@ -37,16 +78,17 @@ def ej1():
     # Realice una función llamada "imprimir_nombre"
     # la cual reciba dos parámetros, el nombre y el apellido
     # Esa función ya se encuentra a medio armar al principio de este archivo.
-    # Debe cumpletar la función para que se imprima en pantalla su nombre y apellido
+    # Debe completar la función para que se imprima en pantalla su nombre y apellido
     # Debe invocar a la función como:
-    imprimir_nombre('mi_nombre', 'mi_apellido')
-
+    imprimir_nombre('Nahuel','Arrascaeta')
     # Reemplazar por su nombre y apellido los textos
+    #realizado
+
 
 
 def ej2():
     # Ejercicios con funciones del sistema
-    numeros = [2, 4, 6, 8, 10, 12]
+    numeros = [2, 6, 4, 8, 10, 12]
 
     '''
     Realice una funcion llamada "promedio" la cual
@@ -78,13 +120,16 @@ def ej2():
 
     # Llamar a la función en este lugar y capturar el valor del retorno
     # promedio_re
-
+    print(promedio(numeros))
     # Luego imprimir en pantalla el valor resultante, tal que:
+    #realizado
+
 
 
 def ej3():
     # Ejercicios de listas y métodos
-    numeros = [2, 4, 6, 8, 10, 12]
+    numeros = [23, 2, 4444, 1, 11, 14]
+
 
     '''
     Generar una una nueva funcion que se llame "ordenar",
@@ -94,13 +139,15 @@ def ej3():
 
     Aproveche el ejemplo de "promedio" para crear una función
     similar, la debe crear y escribir abajo de ella.
-
     '''
 
     # Luego de crear la función invocarla en este lugar:
     # lista_ordenada = ordenar(numeros)
     # Imprimir en pantalla "lista_ordenada" que tendrá
     # los valores retornado por la función ordenar
+    ordenar(numeros)
+    #realizado
+
 
 
 def ej4():
@@ -139,12 +186,18 @@ def ej4():
     # Invocar lista_aleatoria
     # mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
     # print(mi_lista_aleatorio)
+    
+    lista_aleatoria(inicio,fin,cantidad,lista_aleatoria_plus)
+    print(lista_aleatoria_plus)
+    #realizado
+
 
 
 def ej5():
     # Ejercicios de listas y métodos
     cantidad_numeros = 5
-
+    inicio = 1
+    fin = 9
     '''
     Utilice la función "lista_aleatoria" para generar
     una lista de 5 números en un rango de 1 a 9 inclusive
@@ -155,18 +208,20 @@ def ej5():
     Para saber cuantas veces se repiten el elemento pasado
     en la lista pueden usar bucles o el método nativo de list
     "count"
-
     '''
+    lista_aleatoria(inicio,fin,cantidad_numeros,lista_aleatoria_plus)
 
     # Por ejemplo creo una lista de 5 elemtnos
     # lista_numeros = lista_aleatoria(...,...,cantidad_numeros)
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # cantidad_tres = contar(lista_numeros, 3)
+    contar(lista_aleatoria_plus,3)
+    #realizado
 
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    ej1()
+    # ej1()
     # ej2()
     # ej3()
     # ej4()
