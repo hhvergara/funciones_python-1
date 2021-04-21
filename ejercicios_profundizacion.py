@@ -103,6 +103,9 @@ def ej3():
         i += 1
         if i == 7:
             break
+    
+    c = max(v,key=v.count)
+    print("El número que más se repite es:",c)
     #realizado
 
 
@@ -120,7 +123,7 @@ def ej4():
     puede haber varias interpretaciones de un mismo enunciado.
 
     Deberá realizar una lista para guardar 5 dados, guardar los números
-    sacados en esa tirada de de dados (son 5 números del 1 al 6)
+    sacados en esa tirada de dados (son 5 números del 1 al 6)
 
     1) El jugador tira la dados y sacar 5 números aleatorios, puede usar
     la función de "lista_aleatoria" para generar dichos números.
@@ -160,10 +163,67 @@ def ej4():
 
     5) Debe repetir este proceso hasta que en su lista de "dados
     guardados" tenga "generala", es decir, 5 números iguales.
-
     '''
 
+    dados = 2
+    v = []
+    new_list = []
 
+    #El primer tiro fuera del bucle
+    print("Primer tiro")
+    lista_aleatoria(1,6,5,v)
+    c = max(v,key=v.count)
+    print("")
+    
+    for i in v:
+
+        if i == c: 
+            new_list.append(c)
+    print("Resultado del primer tiro:",new_list)
+    print("")
+
+    while True:
+        #Imprime la cantidad de tiros:
+
+        if dados == 2:
+            print("Segundo tiro")
+        elif dados == 1:
+            print("")
+            print("Tercer tiro")
+        
+        v = []
+        lista_aleatoria(1,6,5,v)
+        print("")
+        
+        #Iteración de la lista para saber si hay genérala:
+        for i in v:
+            
+            if len(new_list) == 5:
+                print(new_list,"Genérala!")
+                break
+            elif i == c:
+                new_list.append(c)
+        
+        #Imprime los resultados de cada tiro
+        if dados == 2:
+            print("Resultados del segundo tiro",new_list)
+        elif dados == 1:
+            print("Resultados del tercer tiro",new_list)
+        dados = dados - 1
+        
+        #Manejo de posibles resultados:
+        if dados == 0 and len(new_list) == 5:
+            print("Se te han acabado los intentos pero lo lograste!! GENÉRALA!")
+            break
+        elif len(new_list) == 5:
+            break
+        elif dados == 0:
+            print("Se te han acabado los intentos, perdiste :c")
+            break
+    #realizado
+    
+
+    
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     # ej1()
