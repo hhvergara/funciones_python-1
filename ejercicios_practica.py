@@ -19,7 +19,7 @@ import random
 
 
 def imprimir_nombre(nombre, apellido):
-    pass
+    pass # --> Sacalo si no se usa :D
     # En este lugar debe colocar el "print" e imprimir
     # en pantalla el nombre y apellido que vienen por parámetro
     # print(.....)
@@ -48,18 +48,18 @@ def promedio(numeros):
 def ordenar(numeros):
     
     numeros.sort()
-    print(numeros)
+    print(numeros) # Utiliza el return, y asigná el resultado a una nueva variable :D
 
 
 
-lista_aleatoria_plus = []
-
+lista_aleatoria_plus = [] # Las variables globales ponelas arriba de todo, debajo de los import y antes de las funciones.
+# las variables globales generalmente van en mayusculas, tipo LISTA_ALEATORIA_PLUS :D
 def lista_aleatoria(inicio,fin,cantidad,lista_aleatoria_plus):
     
     for i in range(cantidad):
         num_aleatorio = random.randrange(inicio,fin+1)
         lista_aleatoria_plus.append(num_aleatorio)
-    print(lista_aleatoria_plus)
+    print(lista_aleatoria_plus) # Usa return :D
 
 
 
@@ -70,7 +70,7 @@ def contar(lista,num):
         if i == num:
             rep += 1
     print("El número {} se repite {} veces!".format(num,rep))
-
+    # Acá también estaría bueno que uses el return así te devuelve el número de repeticiones :D
 
 
 def ej1():
@@ -145,7 +145,7 @@ def ej3():
     # lista_ordenada = ordenar(numeros)
     # Imprimir en pantalla "lista_ordenada" que tendrá
     # los valores retornado por la función ordenar
-    ordenar(numeros)
+    ordenar(numeros) # Acá te decía que los retornes :D
     #realizado
 
 
@@ -187,7 +187,12 @@ def ej4():
     # mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
     # print(mi_lista_aleatorio)
     
-    lista_aleatoria(inicio,fin,cantidad,lista_aleatoria_plus)
+    lista_aleatoria(inicio,fin,cantidad,lista_aleatoria_plus) # Esto funciona porque la lista es GLOBAL, pero tene en cuenta una cosa:
+    # ¿Qué pasa si mi variable se ve afectada por otra función mientras estoy operandola con esta función?
+    # Las variables globales pueden ser accedidas por todas las funciones, entonces tenes que tener cuidado de en qué momento estas modificandola
+    # con otras funciones, porque podes traer problemas en tu programa. Supone que esta variable la usas para un proceso, y antes de este proceso sin querer la modifica otra
+    # función, entonces vas a estar usando la variable para tu proceso con un valor modificado accidentalmente. Ojo con eso. El ejercicio está perfecto, solo te lo comento
+    # para que cuando uses esta técnica lo hagas sabiendo que eso te puede pasar. A veces es deseado (si usas la variable global como un control de estado de algo), otras no.
     print(lista_aleatoria_plus)
     #realizado
 
