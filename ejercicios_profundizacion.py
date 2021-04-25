@@ -221,7 +221,7 @@ def ej4():
             print("Se te han acabado los intentos, perdiste :c")
             break
     #realizado
-    
+    # Mencantó :D
 
     
 if __name__ == '__main__':
