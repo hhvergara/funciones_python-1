@@ -21,7 +21,9 @@ import random
 def imprimir_nombre(nombre, apellido):
     print ("Mi nombe es:", nombre, apellido, "\n")
 
-imprimir_nombre(nombre='Francisco', apellido='Perez Chada')
+imprimir_nombre(nombre='Francisco', apellido='Perez Chada') # Esto quedó fuera de la función y también está
+# Fuera de la función principal main, recorda que las sentencias que queden fuera de las funciones, deben estar
+# dentro de la función principal, para evitar comportamientos no deseados :D
 
 
 # En este lugar debe colocar el "print" e imprimir
@@ -30,7 +32,7 @@ imprimir_nombre(nombre='Francisco', apellido='Perez Chada')
 
 
 def promedio(numeros):
-    numeros = range(10)
+    numeros = range(10) # OJO acá estas sobrescribiendo la variable con el metodo range!
     print('El rango de numeros elegido es:',numeros,"\n")
     sumatoria = sum(numeros)
     print("La sumatoria del rango elegido es:", sumatoria,"\n")
@@ -38,6 +40,7 @@ def promedio(numeros):
     print ("la cantidad de numeros para obtener", q_numeros,"\n")
     operacion = sumatoria / q_numeros
     print ( "El promedio es:", operacion,"\n")
+    # Tenes que usar el return para devolver el valor al hilo principal :D
 
 promedio(numeros = 5 )
 
@@ -58,7 +61,7 @@ def ej1():
 
     nombre_completo = imprimir_nombre2(mi_nombre= "Francisco Javier", mi_apellido = " Perez Chada \n")
     print("Mi nombre completo es:", nombre_completo)
-
+    # Excelente! usas funciones anidadas! :D
 # Realice una función llamada "imprimir_nombre"
     # la cual reciba dos parámetros, el nombre y el apellido
     # Esa función ya se encuentra a medio armar al principio de este archivo.
@@ -161,7 +164,7 @@ def ej4():
     # https://docs.python.org/3.7/library/random.html
     # Ante cualquier duda preguntar en el campus!
 
-    import random
+    import random # Por convención se ponen los import al inicio del programa ;D
     
     def lista_aleatoria(inicio, fin, cantidad):
         list_a = []
@@ -202,7 +205,7 @@ def ej5():
     print("Ejercicio 5 \n")
 
 
-    import random
+    import random # Idem al punto 4 ;D
     
     def lista_aleatoria(inicio, fin, cantidad):
         list_a = []
@@ -216,7 +219,7 @@ def ej5():
     print("El listado aleatorio de la lista es:", mi_lista, "\n")
     print ("El contador nos indica que el numero 3 esta repetido:", contar, "vez / veces \n")
     
-
+    # NOTE: La lista_aleatoria() la podrías definir afuera del ej4() de manera que la puedas reutilizar en el ej5()
 
     '''
     Utilice la función "lista_aleatoria" para generar
